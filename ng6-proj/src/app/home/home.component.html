@@ -1,0 +1,16 @@
+<ngx-gridster [options]="gridsterOptions" [draggableOptions]="gridsterDraggableOptions">
+
+  <ngx-gridster-item *ngFor="let widget of widgets" 
+            [(x)]="widget.x" 
+            [(y)]="widget.y" 
+            [(w)]="widget.w" 
+            [(h)]="widget.h"
+            [dragAndDrop]="widget.dragAndDrop"
+            [resizable]="widget.resizable">
+      <div class="panel-heading">
+          <h5 class="panel-title">{{ widget.title }}</h5>
+      </div>
+      <app-training></app-training>
+  </ngx-gridster-item>
+
+</ngx-gridster>
